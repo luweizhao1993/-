@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#f5f1e8" name="theme-color"/>
+<title>2026 旅行手册 · Turkey · Egypt · Europe</title>
+<style>
+:root{--bg:#f5f1e8;--card:#fffdf8;--text:#24231f;--muted:#777268;--line:#e4ded2;--accent:#476b8f;--accent2:#b56b45;--good:#4d8060;--warn:#b77932;--shadow:0 8px 28px rgba(45,38,28,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB",Arial,sans-serif;line-height:1.65}
+.container{max-width:980px;margin:auto;padding:16px 16px 60px}
+.hero{padding:22px 4px 10px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.hero h1{font-size:32px;line-height:1.15;margin:8px 0}.hero p{margin:6px 0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin:14px 0;box-shadow:var(--shadow)}
+.focus{background:linear-gradient(135deg,#314b63,#6c806d);color:white;border:0}.focus .muted{color:#dce4e7}.event-title{font-size:22px;font-weight:750}.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.count div{background:#ffffff18;border:1px solid #ffffff25;border-radius:14px;padding:10px 5px;text-align:center}.count strong{display:block;font-size:27px;line-height:1.1}.count span{font-size:11px;opacity:.8}
+h2{font-size:20px;margin:0 0 12px}h3{font-size:17px;margin:0 0 6px}.muted{color:var(--muted);font-size:13px}.tag{display:inline-block;border-radius:999px;padding:2px 8px;font-size:11px;margin:2px 4px 2px 0;background:#eee8dc}.tag.book{background:#f6dfc6;color:#8b4d19}.tag.done{background:#dcecdf;color:#3f694c}.tag.warn{background:#f3e1c9;color:#8a5a25}
+.map-wrap{overflow:hidden}.map{width:100%;height:310px;background:#f9f7f1;border-radius:16px}.route{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.dot{stroke:#fff;stroke-width:3}.map text{font-size:13px;fill:#35332e}.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.legend span{font-size:11px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.mini{border:1px solid var(--line);border-radius:14px;padding:12px}.mini p{margin:3px 0}
+.confirmed{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.confirmed .mini strong{display:block}
+.day{border-top:1px solid var(--line);padding:18px 0}.place{display:flex;align-items:center;justify-content:space-between;gap:10px}.place-main{min-width:0}.map-icon{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;min-width:32px;border:1px solid var(--line);border-radius:10px;background:var(--card);text-decoration:none;font-size:17px;box-shadow:0 2px 6px rgba(0,0,0,.05)}.map-icon:hover{transform:translateY(-1px)}.subline{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}.route-note{font-size:12px;color:var(--muted);margin-top:5px}.day-tools{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.navbtn.secondary{background:transparent;color:var(--accent);border:1px solid var(--line)}.day:first-child{border-top:0}.day-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.day-title{font-weight:750}.day-date{color:var(--muted);font-size:12px}.timeline{margin-top:10px}.item{display:grid;grid-template-columns:58px 1fr;gap:12px;padding:9px 0}.time{font-weight:700;color:var(--accent);font-size:13px}.item-content{border-left:2px solid var(--line);padding-left:12px}.item-content b{display:block}.item-content p{margin:2px 0;color:var(--muted);font-size:13px}
+details summary{cursor:pointer;list-style:none;font-weight:650;color:var(--accent)}details summary::-webkit-details-marker{display:none}.day-map{margin-top:10px;padding:12px;background:#faf7f0;border-radius:14px}.navbtn{display:inline-block;margin-top:6px;padding:7px 10px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-size:12px;border:0;cursor:pointer}
+.todo label{display:block;padding:9px 0;border-bottom:1px solid var(--line)}.todo label:last-child{border:0}.todo input{margin-right:9px}
+.expense-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.expense-grid label{font-size:12px;color:var(--muted)}.expense-grid input{width:100%;margin-top:3px;border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--card);color:var(--text)}
+.total{font-size:24px;font-weight:800;margin-top:14px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.summary .mini{text-align:center}.summary strong{display:block;font-size:20px}
+.tip{padding:10px 12px;border-left:3px solid var(--warn);background:#fbf2e6;border-radius:8px;margin:8px 0;font-size:13px}
+.small{font-size:12px}.footer{color:var(--muted);text-align:center;font-size:11px;padding-top:18px}
+@media(max-width:650px){.container{padding:12px 12px 45px}.hero h1{font-size:28px}.grid,.confirmed{grid-template-columns:1fr}.count strong{font-size:22px}.expense-grid{grid-template-columns:repeat(2,1fr)}.summary{grid-template-columns:1fr 1fr 1fr}.map{height:260px}}
+@media(prefers-color-scheme:dark){:root{--bg:#111310;--card:#1b1d1a;--text:#f0eee8;--muted:#aaa69b;--line:#383a35;--accent:#8eafd0;--accent2:#d28b68;--good:#79ad88;--warn:#d2a061}.map,.day-map{background:#161815}.tag{background:#30322d}.tag.book{background:#4b3726;color:#f1bd87}.tag.done{background:#26392c;color:#a7d0b2}.tip{background:#332a1e}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<div class="eyebrow">Travel Handbook · 2026</div>
+<h1>Turkey · Egypt · Europe</h1>
+<p>以已出票航班为锚点的旅行执行手册</p>
+</header>
+<section class="card focus">
+<div class="muted">此刻关注 · NEXT EVENT</div>
+<div class="event-title" id="nextEvent">加载中…</div>
+<div class="muted" id="nextMeta"></div>
+<div class="count">
+<div><strong id="dd">—</strong><span>天</span></div>
+<div><strong id="hh">—</strong><span>时</span></div>
+<div><strong id="mm">—</strong><span>分</span></div>
+<div><strong id="ss">—</strong><span>秒</span></div>
+</div>
+</section>
+<section class="card">
+<h2>🗺 行程总览</h2>
+<div class="map-wrap">
+<svg aria-label="旅行路线示意图" class="map" role="img" viewbox="0 0 900 330">
+<path class="route" d="M75 70 C160 50 210 80 285 105" stroke="#557aa0"></path>
+<path class="route" d="M285 105 C320 145 340 190 385 220 C430 250 470 240 505 210" stroke="#b76b47"></path>
+<path class="route" d="M505 210 C585 185 620 150 690 125" stroke="#6e8f6b"></path>
+<path class="route" d="M690 125 C760 115 805 145 845 170" stroke="#9b7d9b"></path>
+<g>
+<circle class="dot" cx="75" cy="70" fill="#557aa0" r="8"></circle><text x="55" y="48">Istanbul</text>
+<circle class="dot" cx="285" cy="105" fill="#557aa0" r="8"></circle><text x="250" y="85">Cappadocia</text>
+<circle class="dot" cx="385" cy="220" fill="#b76b47" r="8"></circle><text x="355" y="250">Antalya</text>
+<circle class="dot" cx="505" cy="210" fill="#b76b47" r="8"></circle><text x="485" y="238">Kaş</text>
+<circle class="dot" cx="570" cy="175" fill="#b76b47" r="8"></circle><text x="550" y="160">Fethiye</text>
+<circle class="dot" cx="690" cy="125" fill="#b76b47" r="8"></circle><text x="670" y="102">Cairo</text>
+<circle class="dot" cx="760" cy="115" fill="#6e8f6b" r="8"></circle><text x="742" y="95">Aswan</text>
+<circle class="dot" cx="805" cy="145" fill="#6e8f6b" r="8"></circle><text x="780" y="135">Luxor</text>
+<circle class="dot" cx="845" cy="170" fill="#6e8f6b" r="8"></circle><text x="810" y="195">Hurghada</text>
+</g>
+</svg>
+</div>
+<div class="legend"><span>🔵 土耳其前段</span><span>🟠 土耳其D400</span><span>🟢 埃及</span><span>🟣 欧洲后段</span></div>
+</section>
+<section class="card">
+<h2>🚆 全程交通</h2>
+<p class="muted">这里集中看完整交通链路；“已确认”代表已经确定，“待订”代表后续需要购买/确认。每日行程里同时用文字写明“住宿 → 车站/机场 → 下一城市”的交通方式；具体班次、站点和接驳在票据确认后再补齐。点击地点可调用高德地图搜索。</p>
+<div class="confirmed">
+<div class="mini"><strong>09/28 ✈️ 上海 → 巴林</strong><br/><span class="tag done">已出票</span><span class="muted">国际航班 · 转机</span></div>
+<div class="mini"><strong>09/29 ✈️ 巴林 → 伊斯坦布尔</strong><br/><span class="tag done">已出票</span><span class="muted">抵达伊斯坦布尔</span></div>
+<div class="mini"><strong>10/02 ✈️ 伊斯坦布尔 → 卡帕多奇亚</strong><br/><span class="tag done">已确认</span><span class="muted">20:45 → 22:05</span></div>
+<div class="mini"><strong>10/03 🚌 卡帕多奇亚 → 安塔利亚</strong><br/><span class="tag book">夜巴</span><span class="muted">10/03 晚出发，10/04 早到</span></div>
+<div class="mini"><strong>10/04 🚗 安塔利亚 → Kaş</strong><br/><span class="tag book">租车</span><span class="muted">D400 自驾 · 沿海公路</span></div>
+<div class="mini"><strong>10/05 🚗 Kaş → Fethiye</strong><br/><span class="tag book">自驾</span><span class="muted">傍晚前往 Fethiye</span></div>
+<div class="mini"><strong>10/07 🚗 Fethiye → Antalya</strong><br/><span class="tag book">自驾</span><span class="muted">返回安塔利亚</span></div>
+<div class="mini"><strong>10/10 ✈️ Antalya → Cairo</strong><br/><span class="tag done">已确认</span><span class="muted">17:50 → 18:40</span></div>
+<div class="mini"><strong>10/16 ✈️ Cairo → Aswan</strong><br/><span class="tag done">已确认</span><span class="muted">19:10 → 20:30</span></div>
+<div class="mini"><strong>10/17–10/18 🚆 Aswan → Luxor</strong><br/><span class="tag book">待订</span><span class="muted">优先考虑火车/陆路交通</span></div>
+<div class="mini"><strong>10/19–10/22 🚌 Luxor → Hurghada</strong><br/><span class="tag book">待订</span><span class="muted">长途巴士或包车，按最终方案确认</span></div>
+<div class="mini"><strong>10/26 ✈️ Hurghada → Rome</strong><br/><span class="tag done">已出票</span><span class="muted">22:00 起飞 · 10/27 抵达罗马</span></div>
+<div class="mini"><strong>10/31 🚆 Rome → Florence</strong><br/><span class="tag book">待订</span><span class="muted">高速列车</span></div>
+<div class="mini"><strong>11/03 🚆 Florence → Venice</strong><br/><span class="tag book">待订</span><span class="muted">高速列车</span></div>
+<div class="mini"><strong>11/04 🚆 Venice → Lucerne</strong><br/><span class="tag book">待订</span><span class="muted">铁路 · 需看具体班次</span></div>
+<div class="mini"><strong>🇨🇭 Lucerne → Interlaken → Zurich Airport</strong><br/><span class="tag book">待订</span><span class="muted">瑞士铁路</span></div>
+<div class="mini"><strong>🇨🇭 ✈️ Zurich Airport → Spain</strong><br/><span class="tag book">待定</span><span class="muted">欧洲后段机票/城市待最终确认</span></div>
+</div>
+</section>
+<section class="card">
+<h2>🎫 电子票夹</h2>
+<p class="muted">把机票、火车票、夜巴票、酒店订单、门票、租车订单等直接放进这里。文件只保存在你当前浏览器的本地 IndexedDB，不上传到网页服务器；换浏览器/清除网站数据后需要重新添加。</p>
+<div class="grid">
+<div class="mini">
+<label class="small">票据类型
+<select id="ticketType" style="width:100%;margin-top:5px;padding:9px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text)">
+<option>✈️ 机票</option><option>🚆 火车票</option><option>🚌 巴士票</option><option>🏨 酒店订单</option><option>🎫 景点/活动</option><option>🚗 租车</option><option>📄 其他</option>
+</select></label>
+<label class="small" style="display:block;margin-top:9px">备注
+<input id="ticketNote" placeholder="例如：10/03 夜巴 / Vatican 13:00" style="width:100%;margin-top:5px;padding:9px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text)"/></label>
+<label class="navbtn" style="margin-top:10px;cursor:pointer">＋ 添加电子票据
+<input accept=".pdf,.png,.jpg,.jpeg,.webp,.heic" id="ticketFile" multiple="" style="display:none" type="file"/></label>
+</div>
+<div class="mini">
+<strong>使用方式</strong>
+<p class="small muted">添加后会按类型整理。点击“打开”即可查看；手机上可直接调用系统文件预览。</p>
+<p class="small muted">建议优先保存：全程机票、夜巴票、火车票、住宿确认单、Vatican 门票、滑翔伞订单、租车订单。</p>
+</div>
+</div>
+<div id="ticketList" style="margin-top:12px"></div>
+</section><section class="card todo">
+<h2>✅ 待办清单</h2>
+<div id="todoList">
+<label><input data-todo="土耳其夜巴 Cappadocia→Antalya" type="checkbox"/>确认/保存夜巴车票</label>
+<label><input data-todo="Antalya租车" type="checkbox"/>确认10/04 Antalya 租车</label>
+<label><input data-todo="滑翔伞" type="checkbox"/>预约10/06 滑翔伞</label>
+<label><input data-todo="埃及住宿" type="checkbox"/>确认 Cairo / Aswan / Luxor / Hurghada 住宿</label>
+<label><input data-todo="瑞士住宿" type="checkbox"/>确认 Switzerland 住宿</label>
+<label><input data-todo="西班牙路线" type="checkbox"/>确认 Switzerland → Spain 后续路线</label>
+<label><input data-todo="欧洲返程" type="checkbox"/>确认欧洲返程航班</label>
+<label><input data-todo="潜水" type="checkbox"/>确认 Hurghada 潜水项目</label>
+</div>
+</section>
+<section class="card">
+<h2>🏨 已确认住宿</h2>
+<div class="confirmed">
+<div class="mini"><strong>🇹🇷 Istanbul</strong> The Central House Istanbul Taksim<br/><span class="muted">09/29–10/01</span></div>
+<div class="mini"><strong>🇹🇷 Cappadocia</strong> 格雷梅皇家石屋酒店<br/><span class="muted">10/02–10/03</span></div>
+<div class="mini"><strong>🇹🇷 Ölüdeniz</strong> Casa De Levissi Oludeniz<br/><span class="muted">已确认信息保留</span></div>
+<div class="mini"><strong>🇮🇹 Rome</strong> Room in Rome<br/><span class="muted">10/27–10/31 · Via di Valle Melaina, 121</span></div>
+<div class="mini"><strong>🇮🇹 Florence</strong> aparto Florence<br/><span class="muted">10/31–11/03</span></div>
+<div class="mini"><strong>🇮🇹 Venice</strong> 女性宿舍住宿<br/><span class="muted">11/03–11/04</span></div>
+</div>
+<p class="small muted">未确认的住宿不虚构名称、地址或电话。</p>
+</section>
+<section class="card">
+<h2>📅 每日行程</h2>
+<p class="muted">每个地点右侧的 <b>🗺️</b> 都可以直接打开导航；当天“全天导航”会按顺序生成多站点路线。时间是执行节奏建议，已出票/已预约时间优先于页面建议；你提供的攻略截图内容会直接并入对应日期，并标注截图中的价格/经验信息。</p>
+<div class="day">
+<div class="day-head"><div><div class="day-title">09/29 · 🇹🇷 Istanbul</div><div class="day-date">抵达 · Taksim 入住 · 轻量恢复</div></div><span class="tag done">航班/住宿已确认</span></div>
+<div class="timeline">
+<div class="item"><div class="time">抵达后</div><div class="item-content"><div class="place"><div class="place-main"><b>伊斯坦布尔机场 → Taksim</b><div class="subline"><span class="tag">机场→住宿</span><span class="tag">建议公共交通</span></div><p><strong>文字交通：</strong>伊斯坦布尔机场（IST）→ The Central House Istanbul Taksim。公共交通可走 M11 → Gayrettepe 换乘 M2 → Taksim；行李多或抵达较晚也可乘 Havaist 到 Taksim，再步行/短程接驳到住宿。先完成入境、取行李和 SIM / 网络处理。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim">🗺️</a></div></div></div><div class="item"><div class="time">机场攻略</div><div class="item-content"><div class="mini"><b>✈️ IST 伊斯坦布尔机场 → Taksim 到达攻略</b><p>以下步骤根据你提供的攻略截图整理；其中 2026/08/24 的价格属于截图当时记录，出发时以现场价格和指引为准。</p><p><strong>1️⃣ 入境：</strong>下飞机后跟着人群走，看到【手提包标志】按箭头走；沿途会经过护照出关盖章处。先排队盖章，盖章后继续跟着手提包标志走。</p><p><strong>2️⃣ 取行李：</strong>和国内机场类似，看大屏幕上的航班号和行李转盘号，找到对应转盘后等待行李。</p><p><strong>3️⃣ 出机场：</strong>认准黄色的【ÇIKIŞ】（出口）标志，跟着箭头走到出口大厅。</p><p><strong>4️⃣ 换钱：</strong>截图攻略记录：取行李区域附近有换钱所，但汇率被认为不理想，不建议在这里换；在出口大厅附近可看到更多换汇点。攻略选择了【QNB】，并记录其位置正好在去找大巴的路上，截图描述为实时汇率、约收 3% 手续费；是否换以及换多少按当日需求决定。</p><p><strong>5️⃣ 坐大巴：</strong>到了出口大厅后右转，找【9号出口大门】；注意不要从这个大门直接出去。旁边有电梯，下到 B2，出电梯就是机场大巴乘车区。</p><p><strong>6️⃣ 卡与乘车：</strong>去【塔克西姆广场】乘车时，截图攻略记录在【16站台】乘车，站台标识清晰，沿数字找即可。沿路会遇到售票处，里面可以买【伊斯坦布尔小红卡】；也可以同时买车票。攻略记录：车票不是纸质票，而是把费用充值进交通卡，上车再刷卡。2026/08/24 截图记录的 IST → 塔克西姆广场价格为约 470 里拉/人，小红卡制卡费约 165 里拉。</p><p><strong>7️⃣ 交通卡充值：</strong>如果提前买了交通红卡，可以在这条线路尽头约 20 站台右手边寻找【充值机】。攻略截图记录该处机器右下角可以切换语言；充值后返回 16 站台，乘车前往塔克西姆广场。</p><p class="small muted">实用顺序：入境 → 取行李 → ÇIKIŞ 出口 → 换汇（如需要）→ 9号出口方向 → 电梯下 B2 → 机场大巴区 → 16站台 → 伊斯坦布尔交通卡/充值 → Taksim。</p></div></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><div class="place"><div class="place-main"><b>Istiklal Street</b><p>办理入住后，在 Istiklal Street 一带散步、吃饭；控制强度，为后面两天老城行程留体力。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=%C4%B0stiklal%20Street%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Istiklal Street">🗺️</a></div></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><div class="place"><div class="place-main"><b>Taksim 周边晚餐</b><p>补给饮用水、零食和第二天随身物品，早点休息。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%20Square%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim Square">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><a class="navbtn secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank">🗺️ 打开当天导航</a></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">09/30 · 🇹🇷 Istanbul</div><div class="day-date">上午自由活动 · 下午大巴扎 · 不安排老城核心景点</div></div><span class="tag">调整后节奏更松</span></div>
+<div class="timeline">
+<div class="item"><div class="time">上午</div><div class="item-content"><div class="place"><div class="place-main"><b>自由活动 / Taksim 周边</b><p>上午不安排蓝色清真寺、圣索菲亚和地下水宫；可以睡到自然醒、补给、咖啡、整理行李，给后续行程留体力。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim">🗺️</a></div></div></div>
+<div class="item"><div class="time">14:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Grand Bazaar · 大巴扎</b><p>下午安排大巴扎，预留约 1.5–2 小时；逛主通道、小巷和店铺，不把购物任务排得太满。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand%20Bazaar%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Grand Bazaar">🗺️</a></div></div></div>
+<div class="item"><div class="time">17:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Grand Bazaar → Taksim</b><p>结束下午活动后返回住宿附近，晚餐、补给并准备 10/01–10/02 的行程。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim">🗺️</a></div></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><b>自由安排</b><p>不再安排必须预约的项目。</p></div></div>
+</div>
+<div class="day-tools"><button class="navbtn secondary" onclick="multiNav(['Grand Bazaar, Istanbul','Taksim, Istanbul'])">🗺️ 打开下午导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/01 · 🇹🇷 Istanbul</div><div class="day-date">攻略 Citywalk：Grand Bazaar → Eminönü → Kadıköy → Bosphorus View Point → bookstore → 欧洲区 → Galata Bridge 日落 → Sirkeci Lokantası 1912</div></div><span class="tag">重点 citywalk</span></div>
+<div class="timeline">
+<div class="item"><div class="time">09:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Grand Bazaar · 大巴扎</b><p>按照你提供的攻略，把大巴扎作为当天第一站；早上人相对少，适合慢慢逛一圈后往 Eminönü 方向走。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grand%20Bazaar%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Grand Bazaar">🗺️</a></div></div></div>
+<div class="item"><div class="time">10:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Eminönü · 埃米诺努</b><p>从大巴扎步行下行到 Eminönü，沿街区和码头逛一圈，为前往亚洲侧的渡轮做准备。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Eminonu%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Eminönü">🗺️</a></div></div></div>
+<div class="item"><div class="time">11:15</div><div class="item-content"><div class="place"><div class="place-main"><b>Eminönü 码头 → Kadıköy 渡轮</b><p>提前约 10–20 分钟到码头，看现场班次；把这段渡轮本身作为景观和交通。</p></div><a class="map-icon" href="https://www.google.com/maps/search/?api=1&amp;query=Eminonu%20Ferry%20Terminal%2C%20Istanbul" rel="noopener" target="_blank" title="查看 Eminönü 渡轮码头">🗺️</a></div></div></div>
+<div class="item"><div class="time">12:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Kadıköy · 卡迪阔伊</b><p>抵达亚洲侧后先吃午饭，再从码头区域开始街区漫步。根据攻略，后续前往 Bosphorus View Point 约需 13 分钟公交，再步行一段。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kadikoy%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Kadıköy">🗺️</a></div></div></div>
+<div class="item"><div class="time">13:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Bosphorus View Point · 海峡观景点</b><p>按你提供的攻略，先乘约 13 分钟公交，再步行到观景点；沿路有上下坡，但风景和街区生活感值得保留。</p></div><a class="map-icon" href="https://www.google.com/maps/search/?api=1&amp;query=Bosphorus%20View%20Point%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Bosphorus View Point">🗺️</a></div></div></div>
+<div class="item"><div class="time">15:00</div><div class="item-content"><div class="place"><div class="place-main"><b>bookstore · 书店（攻略标注）</b><p>从观景点一路下坡，按攻略前往书店；沿途会经过很有生活感的街区和彩虹小屋，适合边走边拍。</p></div><a class="map-icon" href="https://www.google.com/maps/search/?api=1&amp;query=bookstore%2C%20Istanbul" rel="noopener" target="_blank" title="搜索攻略中的 bookstore">🗺️</a></div></div></div>
+<div class="item"><div class="time">16:30</div><div class="item-content"><div class="place"><div class="place-main"><b>亚洲侧码头 → 欧洲区渡轮</b><p>结束亚洲侧 citywalk，搭渡轮回欧洲区；尽量把回程安排在日落前，留足前往 Galata Bridge 的时间。</p></div><a class="map-icon" href="https://www.google.com/maps/search/?api=1&amp;query=Kadikoy%20Ferry%20Terminal%2C%20Istanbul" rel="noopener" target="_blank" title="查看 Kadıköy 渡轮码头">🗺️</a></div></div></div>
+<div class="item"><div class="time">18:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Galata Bridge · 大桥日落 / 夜景</b><div class="subline"><span class="tag done">保留</span><span class="tag">当日重点</span></div><p>保留在 10/01 晚上。重点看金角湾、水面、渡轮、两岸建筑与日落后的灯光；可以在桥上慢慢走，不必赶点。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Galata%20Bridge%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Galata Bridge">🗺️</a></div></div></div>
+<div class="item"><div class="time">19:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Sirkeci Lokantası 1912</b><p>按照攻略作为晚餐收尾点。建议根据当天状态决定是否直接前往；地址可在出发前再核对一次。</p></div><a class="map-icon" href="https://www.google.com/maps/search/?api=1&amp;query=Sirkeci%20Lokantasi%201912%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Sirkeci Lokantası 1912">🗺️</a></div></div></div>
+<div class="item"><div class="time">21:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Sirkeci → Taksim 返回住宿</b><p>结束 citywalk，回住宿休息。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Grand Bazaar, Istanbul','Eminonu, Istanbul','Kadikoy, Istanbul','Bosphorus View Point, Istanbul','bookstore, Istanbul','Kadikoy Ferry Terminal, Istanbul','Galata Bridge, Istanbul','Sirkeci Lokantasi 1912, Istanbul','Taksim, Istanbul'])">🗺️ 打开全天多站导航</button></div>
+<div class="note">📌 已按你提供的攻略把路线放入 10/01：Grand Bazaar → Eminönü → Kadıköy → Bosphorus View Point → bookstore → 渡轮回欧洲区 → Galata Bridge → Sirkeci Lokantası 1912。</div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/02 · 🇹🇷 Istanbul → Cappadocia</div><div class="day-date">上午 Sultanahmet 核心景点 · 20:45 航班 · 22:05 抵达</div></div><span class="tag done">航班已确认</span></div>
+<div class="timeline">
+<div class="item"><div class="time">08:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Blue Mosque · 蓝色清真寺</b><p>从 Taksim 前往 Sultanahmet。上午先参观；蓝色清真寺为清真寺，实际开放需避开礼拜时段并注意着装。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Blue%20Mosque%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Blue Mosque">🗺️</a></div></div></div>
+<div class="item"><div class="time">09:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Hagia Sophia · 圣索菲亚</b><p>步行前往，预留约 45–75 分钟；游客走指定游客入口，实际开放可能受礼拜时段影响，按当天票务/现场指引为准。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hagia%20Sophia%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Hagia Sophia">🗺️</a></div></div></div>
+<div class="item"><div class="time">10:45</div><div class="item-content"><div class="place"><div class="place-main"><b>Basilica Cistern · 地下水宫</b><div class="subline"><span class="tag book">建议提前看票</span></div><p>安排约 45–60 分钟；官方当前白天开放时段为 09:00–18:30，入口就在 Sultanahmet 核心区附近。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Basilica%20Cistern%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Basilica Cistern">🗺️</a></div></div></div>
+<div class="item"><div class="time">12:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Sultanahmet 午餐 / 返回 Taksim</b><p>景点结束后简单午餐，回住宿取行李。不要再安排远距离景点。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Taksim%2C%20Istanbul" rel="noopener" target="_blank" title="导航到 Taksim">🗺️</a></div></div></div>
+<div class="item"><div class="time">14:00–16:00</div><div class="item-content"><b>住宿取行李 → Istanbul Airport</b><p><strong>文字交通：</strong>可选 M2 从 Taksim → Gayrettepe 转 M11 → Istanbul Airport；也可乘 Havaist 机场大巴直达。根据行李量和当日班次选择，预留安检与值机时间。</p></div></div>
+<div class="item"><div class="time">20:45</div><div class="item-content"><div class="place"><div class="place-main"><b>Istanbul → Cappadocia</b><p>已确认航班；22:05 抵达。落地后按下方机场接驳攻略前往 Göreme / 酒店。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cappadocia%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Cappadocia">🗺️</a></div></div></div>
+<div class="item"><div class="time">22:05+</div><div class="item-content"><b>NAV 机场 → Göreme / 住宿</b><p><strong>攻略截图记录：</strong>机场正规共享小巴点在出航站楼后按官方标识寻找；攻略记录约 400 TL/人（2026 年 8 月初实测），通常坐满发车，可直接送到酒店附近；现金准备好，并提前确认酒店名称。价格和班次以抵达当天现场为准。</p></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Blue Mosque, Istanbul','Hagia Sophia, Istanbul','Basilica Cistern, Istanbul','Taksim, Istanbul','Istanbul Airport'])">🗺️ 打开上午景点→机场路线</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/03 · 🇹🇷 Cappadocia</div><div class="day-date">白天细玩 · 日落体验 · 夜巴前往 Antalya</div></div><span class="tag book">夜巴 / ATV 建议提前</span></div>
+<div class="timeline">
+<div class="item"><div class="time">08:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Göreme → Zelve Open Air Museum</b><p>早餐后前往露天博物馆，安排约 1.5 小时。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zelve%20Open%20Air%20Museum%2C%20Cappadocia" rel="noopener" target="_blank" title="导航到 Zelve">🗺️</a></div></div></div>
+<div class="item"><div class="time">10:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Avanos</b><p>陶艺小镇散步、河边走走；是否付费体验以现场选择为准。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Avanos%2C%20Cappadocia" rel="noopener" target="_blank" title="导航到 Avanos">🗺️</a></div></div></div>
+<div class="item"><div class="time">12:30</div><div class="item-content"><b>Avanos 午餐</b><p>午餐后回 Göreme / 住宿区域短休，避免下午连续暴走。</p></div></div>
+<div class="item"><div class="time">15:30</div><div class="item-content"><div class="place"><div class="place-main"><b>Göreme / Rose Valley 周边</b><p>为日落活动预留集合与换装时间。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rose%20Valley%2C%20Cappadocia" rel="noopener" target="_blank" title="导航到 Rose Valley">🗺️</a></div></div></div>
+<div class="item"><div class="time">17:00</div><div class="item-content"><div class="place"><div class="place-main"><b>ATV Sunset Route</b><div class="subline"><span class="tag book">建议提前预约</span></div><p>按供应商安排走 Rose / Sword / Love Valley 一带，日落后返回。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Goreme%2C%20Cappadocia" rel="noopener" target="_blank" title="导航到 Göreme">🗺️</a></div></div></div>
+<div class="item"><div class="time">20:30</div><div class="item-content"><b>取行李 → 夜巴站</b><p>提前确认车站名称、上车点和行李规则，留出晚餐与候车时间。</p></div></div>
+<div class="item"><div class="time">夜间</div><div class="item-content"><div class="place"><div class="place-main"><b>Cappadocia → Antalya 夜巴</b><p><strong>文字交通：</strong>Göreme / Cappadocia 住宿 → 夜巴站 → Antalya。10/03 晚出发、10/04 早到；车站名称和上车点以车票为准，提前确认行李规则。车票应与电子票夹绑定。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Antalya%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Antalya">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Zelve Open Air Museum, Cappadocia','Avanos, Cappadocia','Rose Valley, Cappadocia','Goreme, Cappadocia','Antalya, Turkey'])">🗺️ 打开全天多站导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/04 · 🇹🇷 Antalya → D400 → Kaş</div><div class="day-date">夜巴抵达 · 早上取车 · D400 海岸公路 · Kaş 住宿</div></div><span class="tag book">租车需提前</span></div>
+<div class="timeline">
+<div class="item"><div class="time">早晨</div><div class="item-content"><div class="place"><div class="place-main"><b>Antalya 抵达 / 取车</b><p><strong>文字交通：</strong>夜巴到 Antalya → 取租车 → D400 自驾。到达后先早餐，再检查轮胎、油量、保险和导航。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Antalya%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Antalya">🗺️</a></div></div></div>
+<div class="item"><div class="time">09:30</div><div class="item-content"><b>D400 出发</b><p>以海岸风景和小停留为主，避免塞太多景点；驾驶疲劳时直接跳过停靠点。</p></div></div>
+<div class="item"><div class="time">中午</div><div class="item-content"><b>沿线小镇 / 海边午餐</b><p>临时选择停车方便的餐厅，保持路线弹性。</p></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaputaş Beach / 海岸观景段</b><p>天气和停车条件合适时停留拍照；不把下水设为必选。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kaputas%20Beach%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Kaputaş Beach">🗺️</a></div></div></div>
+<div class="item"><div class="time">傍晚</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaş</b><p>抵达后办理入住、海边散步和晚餐，结束第一段 D400。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kas%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Kaş">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Antalya, Turkey','Kaputas Beach, Turkey','Kas, Turkey'])">🗺️ 打开全天多站导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/05 · 🇹🇷 Kaş → Fethiye</div><div class="day-date">Kaş 全天海边慢游 · 傍晚驾车去 Fethiye</div></div><span class="tag">休闲日</span></div>
+<div class="timeline">
+<div class="item"><div class="time">09:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaş 老城</b><p>早餐后逛主街、石屋巷道和小镇中心，节奏放慢。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kas%20Old%20Town%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Kaş Old Town">🗺️</a></div></div></div>
+<div class="item"><div class="time">11:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaş Harbour · 港口</b><p>港口和海边慢走，可根据天气临时安排咖啡或短休。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kas%20Harbour%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Kaş Harbour">🗺️</a></div></div></div>
+<div class="item"><div class="time">13:00</div><div class="item-content"><b>午餐</b><p>可参考你之前记下的 FÜM Smokehouse、Bunbun Kaş，再按当天营业情况选择。</p></div></div>
+<div class="item"><div class="time">15:00</div><div class="item-content"><b>自由时间 / 海边</b><p>不再增加远距离景点，给傍晚自驾留出余量。</p></div></div>
+<div class="item"><div class="time">17:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaş → Fethiye 自驾</b><p><strong>文字交通：</strong>Kaş 住宿取车 → D400/沿海公路 → Fethiye / Ölüdeniz 住宿。傍晚离开，抵达后入住；夜间不再安排高强度活动。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Fethiye%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Fethiye">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Kas Old Town, Turkey','Kas Harbour, Turkey','Fethiye, Turkey'])">🗺️ 打开全天多站导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/06 · 🇹🇷 Fethiye / Ölüdeniz</div><div class="day-date">滑翔伞主行程 · 留天气机动时间</div></div><span class="tag book">滑翔伞必须提前预约</span></div>
+<div class="timeline">
+<div class="item"><div class="time">早晨</div><div class="item-content"><div class="place"><div class="place-main"><b>Fethiye → Ölüdeniz</b><p>按供应商指定集合时间前往，不建议自己卡得太紧。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Oludeniz%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Ölüdeniz">🗺️</a></div></div></div>
+<div class="item"><div class="time">预约时段</div><div class="item-content"><div class="place"><div class="place-main"><b>Ölüdeniz Paragliding · 滑翔伞</b><div class="subline"><span class="tag book">必须预约</span><span class="tag warn">天气影响</span></div><p>核心行程只保留这一项，天气不好时把改期作为第一备选。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Oludeniz%20Paragliding%2C%20Turkey" rel="noopener" target="_blank" title="导航到滑翔伞集合区域">🗺️</a></div></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><div class="place"><div class="place-main"><b>Ölüdeniz Beach</b><p>滑翔伞后在海边休息、吃饭，不继续安排高风险活动。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Oludeniz%20Beach%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Ölüdeniz Beach">🗺️</a></div></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><b>Fethiye 返回住宿</b><p>早点休息，为 10/07 返还租车 / 返回 Antalya 做准备。</p></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Fethiye, Turkey','Oludeniz Paragliding, Turkey','Oludeniz Beach, Turkey','Fethiye, Turkey'])">🗺️ 打开全天多站导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/07 · 🇹🇷 Fethiye → Antalya</div><div class="day-date">返程日 · 之后在 Antalya 休整至 10/10</div></div><span class="tag">交通日</span></div>
+<div class="timeline">
+<div class="item"><div class="time">09:00</div><div class="item-content"><b>Fethiye 早餐 / 整理行李</b><p>检查车内物品、行李和租车文件。</p></div></div>
+<div class="item"><div class="time">10:00</div><div class="item-content"><div class="place"><div class="place-main"><b>Fethiye → Antalya 自驾</b><p><strong>文字交通：</strong>Fethiye 住宿 → 自驾返回 Antalya；按还车地点和航班时间倒推出发时间。</p>返回路线以安全和还车时间为核心，不额外硬塞景点。</div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Antalya%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Antalya">🗺️</a></div></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><div class="place"><div class="place-main"><b>Antalya 入住 / 还车安排</b><p>根据租车合同确认最终还车点；之后进入休整模式。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Antalya%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Antalya">🗺️</a></div></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><b>Antalya 老城 / 海边</b><p>仅作轻量散步，不安排跨城活动。</p></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Fethiye, Turkey','Antalya, Turkey'])">🗺️ 打开返程导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/08 · 🇹🇷 Antalya</div><div class="day-date">休闲 + 补给日</div></div><span class="tag">机动</span></div>
+<div class="timeline">
+<div class="item"><div class="time">上午</div><div class="item-content"><div class="place"><div class="place-main"><b>Kaleiçi · 安塔利亚老城</b><p>老城巷道、港口周边慢逛；以休闲为主。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kaleici%2C%20Antalya" rel="noopener" target="_blank" title="导航到 Kaleiçi">🗺️</a></div></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><b>超市 / 洗衣 / 旅行补给</b><p>把埃及段需要的衣物、防晒、药品和电子设备充电等一次处理。</p></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><b>海边晚餐 / 休息</b><p>保持轻量，不再安排长距离交通。</p></div></div>
+</div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/09 · 🇹🇷 Antalya</div><div class="day-date">埃及出发前准备日</div></div><span class="tag">机动</span></div>
+<div class="timeline">
+<div class="item"><div class="time">上午</div><div class="item-content"><b>睡到自然醒 / 早餐</b><p>作为旅途中恢复日，不设置硬性景点。</p></div></div>
+<div class="item"><div class="time">中午</div><div class="item-content"><b>整理埃及段行李</b><p>把土耳其租车/票据、埃及酒店/交通票据分别归类到电子票夹。</p></div></div>
+<div class="item"><div class="time">下午</div><div class="item-content"><div class="place"><div class="place-main"><b>Antalya 海边 / 公园</b><p>最后一段散步与休息，保持轻松。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Antalya%20Old%20Harbour%2C%20Turkey" rel="noopener" target="_blank" title="导航到 Antalya Old Harbour">🗺️</a></div></div></div>
+<div class="item"><div class="time">晚上</div><div class="item-content"><b>确认 10/10 航班 / 机场交通</b><p>把护照、机票和下一段住宿整理在随手可取的位置。</p></div></div>
+</div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/10 · 🇹🇷 Antalya → 🇪🇬 Cairo</div><div class="day-date">17:50 起飞 · 18:40 抵达 · 埃及行程正式开始</div></div><span class="tag done">航班已确认</span></div>
+<div class="timeline">
+<div class="item"><div class="time">上午</div><div class="item-content"><b>Antalya 早餐 / 最后检查</b><p>确认护照、机票、电子票夹和充电设备。</p></div></div>
+<div class="item"><div class="time">14:00+</div><div class="item-content"><b>前往 Antalya Airport</b><p><strong>文字交通：</strong>Antalya 住宿 → 租车点/还车 → Antalya Airport。当天以航班 17:50 为硬节点，预留还车、机场安检和值机时间；具体机场接驳方式待最终还车点确认。</p></div></div>
+<div class="item"><div class="time">17:50</div><div class="item-content"><div class="place"><div class="place-main"><b>Antalya → Cairo</b><p>已确认航班；抵达后转入 Cairo → Aswan → Luxor → Hurghada 的埃及主线。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cairo%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Cairo">🗺️</a></div></div></div>
+<div class="item"><div class="time">18:40+</div><div class="item-content"><div class="place"><div class="place-main"><b>Cairo 抵达 / 入住</b><p>以落地时间为准，当晚不再塞进复杂景点。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cairo%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Cairo">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><a class="navbtn secondary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cairo%2C%20Egypt" rel="noopener" target="_blank">🗺️ Cairo 导航</a></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/10–10/16 · 🇪🇬 Cairo</div><div class="day-date">埃及前段 · 10/16 19:10 Cairo → Aswan</div></div><span class="tag warn">具体预约待细化</span></div>
+<div class="timeline">
+<div class="item"><div class="time">主线</div><div class="item-content"><div class="place"><div class="place-main"><b>Cairo</b><p>先按金字塔 / 埃及博物馆 / 开罗老城等模块安排，具体日期以你的住宿与门票为准。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Cairo%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Cairo">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/16 19:10</div><div class="item-content"><div class="place"><div class="place-main"><b>Cairo → Aswan</b><p><strong>文字交通：</strong>Cairo 住宿 → Cairo Airport → 已确认航班 → Aswan Airport → 住宿。20:30 抵达后进入埃及南部段；机场到酒店的接驳方式待最终住宿确认。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Aswan%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Aswan">🗺️</a></div></div></div>
+</div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/16–10/27 · 🇪🇬 Aswan → Luxor → Hurghada</div><div class="day-date">埃及后段 · Hurghada 约 5 天休闲/潜水</div></div><span class="tag warn">交通票据待补齐</span></div>
+<div class="timeline">
+<div class="item"><div class="time">10/16</div><div class="item-content"><div class="place"><div class="place-main"><b>Aswan</b><p>航班落地后入住与休息。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Aswan%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Aswan">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/17–18</div><div class="item-content"><div class="place"><div class="place-main"><b>Aswan → Luxor</b><p>按最终票务选择火车/陆路交通；到达 Luxor 后继续神庙与尼罗河一线。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Luxor%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Luxor">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/19–22</div><div class="item-content"><div class="place"><div class="place-main"><b>Luxor → Hurghada</b><p>巴士或包车按最终方案确认；Hurghada 以休闲、浮潜、潜水为主。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hurghada%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Hurghada">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/26</div><div class="item-content"><div class="place"><div class="place-main"><b>Hurghada → Hurghada Airport</b><p><strong>文字交通：</strong>Hurghada 住宿 → 机场接驳/出租车 → Hurghada Airport。白天休闲/潜水收尾后提前前往机场；22:00 航班前往 Rome。具体接驳方式按最终住宿位置确认。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Hurghada%20International%20Airport%2C%20Egypt" rel="noopener" target="_blank" title="导航到 Hurghada International Airport">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Aswan, Egypt','Luxor, Egypt','Hurghada, Egypt'])">🗺️ 打开埃及南部多站导航</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">10/27–11/04 · 🇮🇹 Italy</div><div class="day-date">Rome → Florence → Venice</div></div><span class="tag done">部分住宿/门票已确认</span></div>
+<div class="timeline">
+<div class="item"><div class="time">10/27</div><div class="item-content"><div class="place"><div class="place-main"><b>Rome</b><p>10/26 晚从 Hurghada 出发，10/27 抵达 Rome；13:00 Vatican Museums 已购票，实际落地时间以机票为准。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rome%2C%20Italy" rel="noopener" target="_blank" title="导航到 Rome">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/28–30</div><div class="item-content"><div class="place"><div class="place-main"><b>Rome 老城 / 斗兽场 / 其他景点</b><p>按闭馆日和预约情况拆分，页面先保留为灵活模块。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Colosseum%2C%20Rome%2C%20Italy" rel="noopener" target="_blank" title="导航到斗兽场">🗺️</a></div></div></div>
+<div class="item"><div class="time">10/31</div><div class="item-content"><div class="place"><div class="place-main"><b>Rome → Florence</b><p><strong>文字交通：</strong>Rome 住宿 → Rome 火车站 → 高速列车 → Florence → 步行/市内公共交通前往 aparto Florence。具体车站与班次待订票后补入电子票夹。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Florence%2C%20Italy" rel="noopener" target="_blank" title="导航到 Florence">🗺️</a></div></div></div>
+<div class="item"><div class="time">11/01–02</div><div class="item-content"><div class="place"><div class="place-main"><b>Florence</b><p>市中心步行、博物馆与观景安排留在这两天。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Florence%2C%20Italy" rel="noopener" target="_blank" title="导航到 Florence">🗺️</a></div></div></div>
+<div class="item"><div class="time">11/03</div><div class="item-content"><div class="place"><div class="place-main"><b>Florence → Venice</b><p><strong>文字交通：</strong>Florence 住宿 → Florence 火车站 → 高速列车 → Venice → 步行/市内公共交通前往女性宿舍。具体班次待订。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Venice%2C%20Italy" rel="noopener" target="_blank" title="导航到 Venice">🗺️</a></div></div></div>
+<div class="item"><div class="time">11/04</div><div class="item-content"><div class="place"><div class="place-main"><b>Venice → Switzerland</b><p><strong>文字交通：</strong>Venice 住宿 → 火车站 → 国际铁路 → Lucerne。具体换乘、班次和座位待订票后补入电子票夹。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lucerne%2C%20Switzerland" rel="noopener" target="_blank" title="导航到 Lucerne">🗺️</a></div></div></div>
+</div>
+<div class="day-tools"><button class="navbtn" onclick="multiNav(['Rome, Italy','Florence, Italy','Venice, Italy','Lucerne, Switzerland'])">🗺️ 打开意大利→瑞士路线</button></div>
+</div>
+<div class="day">
+<div class="day-head"><div><div class="day-title">11月初 · 🇨🇭 Switzerland → 🇪🇸 Spain</div><div class="day-date">Lucerne → Interlaken → Zurich → Spain</div></div><span class="tag warn">住宿/航班待确认</span></div>
+<div class="timeline">
+<div class="item"><div class="time">瑞士段</div><div class="item-content"><div class="place"><div class="place-main"><b>Lucerne</b><p>瑞士停留主基地，按最终住宿安排城市步行和湖区活动。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lucerne%2C%20Switzerland" rel="noopener" target="_blank" title="导航到 Lucerne">🗺️</a></div></div></div>
+<div class="item"><div class="time">随后</div><div class="item-content"><div class="place"><div class="place-main"><b>Interlaken</b><p>作为瑞士第二段停留点，再向 Zurich Airport 衔接。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Interlaken%2C%20Switzerland" rel="noopener" target="_blank" title="导航到 Interlaken">🗺️</a></div></div></div>
+<div class="item"><div class="time">离境前</div><div class="item-content"><div class="place"><div class="place-main"><b>Zurich Airport → Spain</b><p>西班牙具体城市和机票尚未最终确认，因此这里只保留路线框架，不虚构航班。</p></div><a class="map-icon" href="https://www.google.com/maps/dir/?api=1&amp;destination=Zurich%20Airport%2C%20Switzerland" rel="noopener" target="_blank" title="导航到 Zurich Airport">🗺️</a></div></div></div>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>🎫 景点与预约提醒</h2>
+<div class="grid">
+<div class="mini"><h3>Zelve Open Air Museum</h3><p>费用：出发前核实最新票价</p><span class="tag">通常无需抢票</span></div>
+<div class="mini"><h3>ATV Sunset Route</h3><p>费用：以供应商当天报价为准</p><span class="tag book">建议提前预约</span></div>
+<div class="mini"><h3>Fethiye / Ölüdeniz 滑翔伞</h3><p>费用：以预约供应商为准</p><span class="tag book">必须提前预约</span></div>
+<div class="mini"><h3>Vatican Museums</h3><p>13:00 · 已购票</p><span class="tag done">已确认</span></div>
+</div>
+<div class="tip">⚠️ 价格会随日期、游客身份、供应商变化；网页不把旧价格当作已确认价格。</div>
+</section>
+
+<section class="card">
+<h2>💰 每日花费记录</h2>
+<p class="muted">金额按你当天实际支付填写；数据保存在当前浏览器，不上传服务器。</p>
+<label>日期 <input id="expenseDate" type="date"/></label>
+<div class="expense-grid" style="margin-top:10px">
+<label>住宿<input id="eHotel" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>车票/交通<input id="eTransport" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>飞机票<input id="eFlight" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>门票<input id="eTicket" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>购物<input id="eShop" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>吃饭<input id="eFood" min="0" placeholder="0" step="0.01" type="number"/></label>
+<label>其他<input id="eOther" min="0" placeholder="0" step="0.01" type="number"/></label>
+</div>
+<button class="navbtn" onclick="saveExpense()">保存当天花费</button>
+<div class="total" id="expenseTotal">累计：0</div>
+<div class="summary">
+<div class="mini"><span class="muted">住宿</span><strong id="sHotel">0</strong></div>
+<div class="mini"><span class="muted">交通+机票</span><strong id="sTransport">0</strong></div>
+<div class="mini"><span class="muted">门票+餐饮+购物+其他</span><strong id="sOther">0</strong></div>
+</div>
+<div class="small muted" id="expenseRows" style="margin-top:12px"></div>
+</section>
+<section class="card">
+<h2>💡 实用贴士</h2>
+<div class="tip">土耳其：10/03 夜巴 → 10/04 早上租车是关键衔接，夜巴到站时间要与租车门店营业时间匹配。</div>
+<div class="tip">D400：10/04 不建议为了“打卡数量”牺牲驾驶安全；以 Antalya → Kaş 为主线。</div>
+<div class="tip">滑翔伞：10/06 受天气影响，预约时要看改期/取消规则。</div>
+<div class="tip">埃及：10/16 Cairo → Aswan 航班是后段行程锚点；10/26 Hurghada → Rome 是离境锚点。</div>
+<div class="tip">公开网页不展示确认号、护照号、房间号或付款信息。</div>
+</section>
+<div class="footer">Travel Handbook · personal trip planning · offline-friendly</div>
+</div>
+<script>
+const events=[
+ {t:"2026-09-28T00:00:00+08:00",title:"✈️ 上海 → 巴林 → 伊斯坦布尔",meta:"9月28日出发 · 巴林转机 · 前往伊斯坦布尔"},
+ {t:"2026-09-29T00:00:00+03:00",title:"🇹🇷 抵达伊斯坦布尔",meta:"9月29日 · 入住 Taksim"},
+ {t:"2026-10-02T20:45:00+03:00",title:"✈️ Istanbul → Cappadocia",meta:"20:45 起飞 · 22:05 抵达"},
+ {t:"2026-10-03T23:00:00+03:00",title:"🚌 Cappadocia → Antalya 夜巴",meta:"10月3日晚 · 前往安塔利亚"},
+ {t:"2026-10-04T08:00:00+03:00",title:"🚗 Antalya 取车 · D400",meta:"10月4日早上 · 开始D400公路旅行"},
+ {t:"2026-10-06T09:00:00+03:00",title:"🪂 Fethiye / Ölüdeniz 滑翔伞",meta:"10月6日 · 预约时间以订单为准"},
+ {t:"2026-10-10T17:50:00+03:00",title:"✈️ Antalya → Cairo",meta:"已确认航班"},
+ {t:"2026-10-16T19:10:00+03:00",title:"✈️ Cairo → Aswan",meta:"已确认航班"},
+ {t:"2026-10-17T08:00:00+03:00",title:"🚆 Aswan → Luxor",meta:"埃及南部陆路交通 · 待订"},
+ {t:"2026-10-19T08:00:00+03:00",title:"🚌 Luxor → Hurghada",meta:"前往红海 · 待订"},
+ {t:"2026-10-26T22:00:00+03:00",title:"✈️ Hurghada → Rome",meta:"已出票 · 10月26日 22:00 起飞"},
+ {t:"2026-10-31T09:00:00+02:00",title:"🚆 Rome → Florence",meta:"意大利高速列车 · 待订"},
+ {t:"2026-11-03T09:00:00+01:00",title:"🚆 Florence → Venice",meta:"意大利高速列车 · 待订"},
+ {t:"2026-11-04T09:00:00+01:00",title:"🚆 Venice → Lucerne",meta:"瑞士方向 · 待订"}
+];
+function nextEvent(){
+ const now=Date.now();
+ return events.filter(e=>new Date(e.t).getTime()>now).sort((a,b)=>new Date(a.t)-new Date(b.t))[0];
+}
+function tick(){
+ const e=nextEvent();
+ if(!e){document.getElementById("nextEvent").textContent="旅程进行中";return}
+ document.getElementById("nextEvent").textContent=e.title;
+ document.getElementById("nextMeta").textContent=e.meta;
+ let d=new Date(e.t).getTime()-Date.now();
+ const days=Math.floor(d/86400000);d%=86400000;
+ const hours=Math.floor(d/3600000);d%=3600000;
+ const mins=Math.floor(d/60000);d%=60000;
+ const secs=Math.floor(d/1000);
+ document.getElementById("dd").textContent=days;
+ document.getElementById("hh").textContent=String(hours).padStart(2,"0");
+ document.getElementById("mm").textContent=String(mins).padStart(2,"0");
+ document.getElementById("ss").textContent=String(secs).padStart(2,"0");
+}
+setInterval(tick,1000);tick();
+
+function amap(q){return "https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(q)}
+function multiNav(points){
+  if(!Array.isArray(points)||!points.length)return;
+  const destination=points[points.length-1];
+  const waypoints=points.slice(0,-1).join("|");
+  let url="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(destination);
+  if(waypoints) url+="&waypoints="+encodeURIComponent(waypoints);
+  window.open(url,"_blank","noopener");
+}
+document.querySelectorAll("[data-todo]").forEach(x=>{
+ const key="todo_"+x.dataset.todo;
+ x.checked=localStorage.getItem(key)==="1";
+ x.addEventListener("change",()=>localStorage.setItem(key,x.checked?"1":"0"));
+});
+function getExpenses(){return JSON.parse(localStorage.getItem("travel_expenses")||"{}")}
+function saveExpense(){
+ const date=document.getElementById("expenseDate").value;
+ if(!date){alert("请先选择日期");return}
+ const ids=["eHotel","eTransport","eFlight","eTicket","eShop","eFood","eOther"];
+ const obj={};
+ ids.forEach(id=>obj[id]=Number(document.getElementById(id).value||0));
+ const all=getExpenses();all[date]=obj;localStorage.setItem("travel_expenses",JSON.stringify(all));
+ renderExpenses();
+}
+function renderExpenses(){
+ const all=getExpenses(), cats={hotel:0,transport:0,flight:0,ticket:0,shop:0,food:0,other:0};
+ let total=0,rows=[];
+ Object.entries(all).sort().forEach(([date,o])=>{
+  const v=Object.values(o).reduce((a,b)=>a+b,0);total+=v;
+  cats.hotel+=o.eHotel||0;cats.transport+=(o.eTransport||0);cats.flight+=(o.eFlight||0);
+  cats.ticket+=o.eTicket||0;cats.shop+=o.eShop||0;cats.food+=o.eFood||0;cats.other+=o.eOther||0;
+  rows.push(`${date}：${v.toFixed(2)}`);
+ });
+ document.getElementById("expenseTotal").textContent="累计："+total.toFixed(2);
+ document.getElementById("sHotel").textContent=cats.hotel.toFixed(2);
+ document.getElementById("sTransport").textContent=(cats.transport+cats.flight).toFixed(2);
+ document.getElementById("sOther").textContent=(cats.ticket+cats.shop+cats.food+cats.other).toFixed(2);
+ document.getElementById("expenseRows").innerHTML=rows.length?rows.join("<br>"):"暂无记录";
+}
+renderExpenses();
+
+const DB_NAME="travelHandbookTickets";
+const DB_VERSION=1;
+let ticketDB=null;
+function openTicketDB(){
+ return new Promise((resolve,reject)=>{
+  const req=indexedDB.open(DB_NAME,DB_VERSION);
+  req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains("tickets"))req.result.createObjectStore("tickets",{keyPath:"id",autoIncrement:true});};
+  req.onsuccess=()=>{ticketDB=req.result;resolve(ticketDB)};
+  req.onerror=()=>reject(req.error);
+ });
+}
+async function addTicket(file){
+ const db=ticketDB||await openTicketDB();
+ const type=document.getElementById("ticketType").value;
+ const note=document.getElementById("ticketNote").value.trim()||file.name;
+ await new Promise((resolve,reject)=>{
+  const tx=db.transaction("tickets","readwrite");
+  tx.objectStore("tickets").add({name:file.name,type,note,size:file.size,mime:file.type,created:Date.now(),blob:file});
+  tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);
+ });
+ document.getElementById("ticketNote").value="";
+ renderTickets();
+}
+async function getTickets(){
+ const db=ticketDB||await openTicketDB();
+ return new Promise((resolve,reject)=>{
+  const req=db.transaction("tickets","readonly").objectStore("tickets").getAll();
+  req.onsuccess=()=>resolve(req.result.sort((a,b)=>b.created-a.created));
+  req.onerror=()=>reject(req.error);
+ });
+}
+async function renderTickets(){
+ const box=document.getElementById("ticketList");
+ if(!box)return;
+ try{
+  const list=await getTickets();
+  if(!list.length){box.innerHTML='<div class="mini muted">还没有票据。点击“添加电子票据”即可开始建立个人票夹。</div>';return}
+  box.innerHTML=list.map(x=>`<div class="mini" style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px">
+    <div><strong>${escapeHtml(x.type)}</strong><div class="small">${escapeHtml(x.note)}</div><div class="muted">${escapeHtml(x.name)} · ${formatBytes(x.size)}</div></div>
+    <div style="white-space:nowrap"><button class="navbtn" onclick="openTicket(${x.id})">打开</button> <button class="navbtn" onclick="deleteTicket(${x.id})" style="background:transparent;color:var(--accent);border:1px solid var(--line)">删除</button></div>
+  </div>`).join("");
+ }catch(e){box.innerHTML='<div class="mini muted">当前浏览器不支持本地票夹存储。</div>'}
+}
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function formatBytes(n){return n<1024?`${n} B`:n<1048576?`${(n/1024).toFixed(0)} KB`:`${(n/1048576).toFixed(1)} MB`}
+async function openTicket(id){
+ const db=ticketDB||await openTicketDB();
+ const x=await new Promise((resolve,reject)=>{const r=db.transaction("tickets","readonly").objectStore("tickets").get(id);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+ if(!x)return;
+ const url=URL.createObjectURL(x.blob);
+ window.open(url,"_blank","noopener");
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+async function deleteTicket(id){
+ if(!confirm("确定删除这份票据吗？"))return;
+ const db=ticketDB||await openTicketDB();
+ await new Promise((resolve,reject)=>{const tx=db.transaction("tickets","readwrite");tx.objectStore("tickets").delete(id);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});
+ renderTickets();
+}
+document.getElementById("ticketFile")?.addEventListener("change",async e=>{
+ for(const file of e.target.files){await addTicket(file)}
+ e.target.value="";
+});
+openTicketDB().then(renderTickets).catch(()=>{});
+</script>
+</body>
+</html>
